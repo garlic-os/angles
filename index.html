@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        html, body {
+            margin: 0;
+        }
+
+        .grid {
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        #straight {
+            background-image: url("grid.svg");
+        }
+
+        #diagonal {
+            background-image: url("diagonal.svg");
+            background-position-x: -5.25px;
+            transform: scaleX(2);
+        }
+
+        #sheet {
+            position: absolute;
+            left: 50%; top: 50%;
+            transform: translate(-50%, -50%);
+            height: 80vh;
+            max-height: 80vh;
+            aspect-ratio: 8.5 / 11;
+            overflow: hidden;
+            box-shadow: 0 0 0 5px black;
+        }
+    </style>
+</head>
+<body>
+    <div id="sheet">
+        <div id="straight" class="grid"></div>
+        <div id="diagonal" class="grid"></div>
+    </div>
+</body>
+</html>
